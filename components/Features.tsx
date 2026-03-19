@@ -15,7 +15,7 @@ const features = [
   {
     title: "Real-time Updates",
     description:
-      "Stay ahead of the market with live brand updates, new investment opportunities, and portfolio notifications pushed straight to your device.",
+      "Stay ahead of the market with live brand updates, new franchise opportunities, and deal notifications pushed straight to your device.",
     icon: Bell,
     color: "text-purple-600",
     bg: "bg-purple-50 dark:bg-purple-900/20",
@@ -31,7 +31,7 @@ const features = [
   {
     title: "Multi-currency",
     description:
-      "Invest in AED, USD, or other major currencies. Franchiseen handles conversions transparently so you can invest globally.",
+      "Pay in AED, USD, or other major currencies. Franchiseen handles conversions transparently so you can manage deals globally.",
     icon: Globe,
     color: "text-orange-600",
     bg: "bg-orange-50 dark:bg-orange-900/20",
@@ -58,7 +58,7 @@ export default function Features() {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-5xl font-black text-foreground tracking-tight mb-6"
           >
-            Everything you need to invest smart
+            Everything you need for your franchise journey
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function Features() {
             transition={{ delay: 0.2 }}
             className="text-foreground/60 max-w-2xl mx-auto text-lg leading-relaxed"
           >
-            Built for investors in the UAE and beyond, Franchiseen gives you the tools and confidence to make the right franchise investment decisions.
+            Built for franchisees in the UAE and beyond, Franchiseen gives you the tools and confidence to make the right franchise expansion decisions.
           </motion.p>
         </div>
 

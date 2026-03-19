@@ -1,6 +1,6 @@
 "use client";
 
-import type { Metadata } from "next";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -37,8 +37,8 @@ export default function TermsPage() {
               </h2>
               <div className="text-muted-foreground leading-relaxed space-y-4 px-1">
                 <p>
-                  By accessing or using the Franchiseen mobile application or website (the "Service"),
-                  you agree to be bound by these Terms of Service ("Terms"). If you do not agree to
+                  By accessing or using the Franchiseen mobile application or website (the &quot;Service&quot;),
+                  you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree to
                   these Terms, do not use the Service.
                 </p>
                 <p>
@@ -55,7 +55,7 @@ export default function TermsPage() {
               </h2>
               <div className="text-muted-foreground leading-relaxed space-y-4 px-1">
                 <p>
-                  Franchiseen is a platform that connects investors with verified franchise opportunities.
+                  Franchiseen is a platform that connects franchisees with verified franchise opportunities and franchisors.
                   The Service provides:
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-4 list-none pl-0">
@@ -77,14 +77,14 @@ export default function TermsPage() {
             <section className="prose prose-stone dark:prose-invert max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-stone-100 dark:bg-stone-900/30 text-stone-700 dark:text-stone-400 flex items-center justify-center text-sm font-bold">3</span>
-                Investment Disclaimer
+                Platform Disclaimer
               </h2>
               <div className="p-6 rounded-2xl border border-brand-100 dark:border-brand-900/20 bg-brand-50/30 dark:bg-brand-900/10 text-muted-foreground">
                 <p className="font-bold text-foreground mb-2">Important Notice</p>
                 <p className="text-sm">
-                  Franchiseen is a marketplace platform and does not provide investment, legal, or
-                  financial advice. All investment decisions are made at your own risk. You should conduct 
-                  your own due diligence and consult qualified advisors before making any investment decisions.
+                  Franchiseen is a marketplace platform and does not provide legal, or
+                  financial advice. All business decisions are made at your own risk. You should conduct 
+                  your own due diligence and consult qualified advisors before entering into any franchise agreements.
                 </p>
               </div>
             </section>

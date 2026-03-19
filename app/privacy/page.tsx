@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -37,10 +36,10 @@ export default function PrivacyPage() {
               </h2>
               <div className="text-muted-foreground leading-relaxed space-y-4 px-1">
                 <p>
-                  This Privacy Policy describes how <strong>House of Guzarishh FZE LLC</strong> ("we", "our", or "us"),
+                  This Privacy Policy describes how <strong>House of Guzarishh FZE LLC</strong> (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;),
                   registered in Ajman Free Zone, United Arab Emirates, collects, uses, and protects personal
                   information you provide through the Franchiseen mobile application and website (collectively,
-                  the "Service").
+                  the &quot;Service&quot;).
                 </p>
                 <p>
                   By using our Service, you agree to the collection and use of information in accordance with
@@ -52,11 +51,11 @@ export default function PrivacyPage() {
             <section className="prose prose-stone dark:prose-invert max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-sm font-bold">2</span>
-                Information We Collect
+                Information Collection
               </h2>
               <div className="text-muted-foreground leading-relaxed space-y-4 px-1">
-                <p>We collect the following types of information:</p>
-                <ul className="grid gap-3 list-none pl-0">
+                <p>We may collect several different types of information, including but not limited to:</p>
+                <ul className="space-y-4 list-none pl-0">
                   <li className="flex gap-3">
                     <span className="text-brand-600 font-bold">•</span>
                     <span><strong>Account information:</strong> Name, email address, and password when you create an account.</span>
@@ -67,7 +66,7 @@ export default function PrivacyPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-brand-600 font-bold">•</span>
-                    <span><strong>Financial information:</strong> Payment details processed securely by Stripe. We do not store full card numbers.</span>
+                    <span><strong>Financial information:</strong> Payment details for subscription or platform fees processed securely by Stripe. We do not store full card numbers.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-brand-600 font-bold">•</span>
@@ -122,32 +121,26 @@ export default function PrivacyPage() {
               </div>
             </section>
 
-            <section className="prose prose-stone dark:prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-sm font-bold">5</span>
-                Data Security & Retention
-              </h2>
-              <div className="text-muted-foreground leading-relaxed space-y-4 px-1">
-                <p>
-                  We implement industry-standard security measures to protect your personal information,
-                  including encryption in transit (TLS) and at rest.
-                </p>
-                <p>
-                  We retain your personal data for as long as your account is active or as needed to provide
-                  you services.
-                </p>
-              </div>
+            <section className="prose prose-stone dark:prose-invert max-w-none shadow-premium bg-stone-900 rounded-3xl p-8 text-white border border-white/5">
+               <h2 className="text-2xl font-bold mb-4">Your Rights</h2>
+               <p className="text-white/70 leading-relaxed mb-6">
+                 Under the UAE&apos;s Federal Decree-Law No. 45 of 2021 on Personal Data Protection (&quot;PDPL&quot;), 
+                 you have the right to access, rectify, and delete your personal data.
+               </p>
             </section>
 
-            <section className="prose prose-stone dark:prose-invert max-w-none">
-              <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 flex items-center justify-center text-sm font-bold">6</span>
-                Contact
-              </h2>
-              <div className="p-6 bg-brand-600 rounded-2xl text-white">
-                <p className="font-bold mb-2">House of Guzarishh FZE LLC</p>
-                <p className="text-sm text-white/80 mb-4">Ajman Free Zone, United Arab Emirates</p>
-                <a href="mailto:hello@franchiseen.com" className="inline-flex items-center gap-2 font-bold hover:underline">
+            <section className="prose prose-stone dark:prose-invert max-w-none bg-stone-50 dark:bg-stone-900/50 p-8 rounded-3xl border border-stone-100 dark:border-stone-800">
+              <h3 className="text-xl font-bold mb-4 text-foreground flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center text-sm font-bold">6</span>
+                Contact Us
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                If you have any questions about this Privacy Policy, please contact us at:
+              </p>
+              <div className="mt-4">
+                <p className="font-bold text-foreground">House of Guzarishh FZE LLC</p>
+                <p className="text-sm">Ajman Free Zone, United Arab Emirates</p>
+                <a href="mailto:hello@franchiseen.com" className="text-brand-600 font-bold hover:underline block mt-2">
                   hello@franchiseen.com
                 </a>
               </div>

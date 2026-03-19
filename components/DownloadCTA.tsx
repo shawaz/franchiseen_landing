@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Apple, Play, ArrowRight, Star } from "lucide-react";
+import { Apple, Play } from "lucide-react";
 
 export default function DownloadCTA() {
   return (
@@ -47,7 +47,7 @@ export default function DownloadCTA() {
               transition={{ delay: 0.2 }}
               className="text-stone-400 text-lg mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Join thousands of investors already using Franchiseen to discover and invest in verified franchise opportunities.
+              Join thousands of users already using Franchiseen to discover and manage verified franchise deals.
             </motion.p>
 
             <motion.div

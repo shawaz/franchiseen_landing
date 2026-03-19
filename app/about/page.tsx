@@ -13,12 +13,12 @@ const values = [
   },
   {
     title: "Growth",
-    description: "Our focus is on identifying sustainable, high-yield brands for our investors.",
+    description: "Our focus is on identifying sustainable, high-yield brands for our partners.",
     icon: Zap,
   },
   {
     title: "Community",
-    description: "Building a network of empowered investors across the Middle East.",
+    description: "Building a network of empowered entrepreneurs across the Middle East.",
     icon: Users,
   },
   {
@@ -45,7 +45,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl sm:text-7xl font-black mb-8 tracking-tight"
           >
-            DEMOCRATIZING <span className="text-yellow-500">INVESTMENT</span>
+            SIMPLIFYING <span className="text-yellow-500">FRANCHISE OWNERSHIP</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed"
           >
-            Franchiseen is on a mission to make high-growth franchise ownership accessible to everyone through fractional investment.
+            Franchiseen is on a mission to simplify franchise ownership through a digital marketplace and comprehensive deal management tools.
           </motion.p>
         </div>
       </section>
@@ -70,13 +70,13 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold mb-6 text-stone-900 dark:text-stone-50">Our Story</h2>
               <div className="space-y-4 text-stone-600 dark:text-stone-400 leading-relaxed">
                 <p>
-                  Founded in Dubai, Franchiseen was born from a simple observation: while the Middle East is home to some of the world's fastest-growing franchises, the barrier to entry for individual investors is often too high.
+                  Founded in Dubai, Franchiseen was born from a simple observation: while the Middle East is home to some of the world&apos;s fastest-growing franchises, the barrier to entry for individual franchisees is often too high.
                 </p>
                 <p>
-                  We set out to bridge this gap by creating a platform that allows anyone to own a piece of a verified, profitable franchise starting with accessible capital.
+                  We set out to bridge this gap by creating a marketplace that connects aspiring business owners with verified, profitable franchise brands.
                 </p>
                 <p>
-                  Today, we are proud to be the region's premier destination for fractional franchise investment, regulated and built for the modern investor.
+                  Today, we are proud to be the region&apos;s premier destination for franchise discovery and deal management, built for the modern entrepreneur.
                 </p>
               </div>
             </motion.div>

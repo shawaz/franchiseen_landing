@@ -6,7 +6,7 @@ import Image from "next/image";
 const steps = [
   {
     step: "01",
-    title: "Explore Franchise",
+    title: "Franchise Discovery",
     description: "Discover premium franchise brands vetted for high profitability and sustainable growth.",
     image: "/intro-1.svg",
     color: "bg-yellow-500",
@@ -20,8 +20,8 @@ const steps = [
   },
   {
     step: "03",
-    title: "Start New Project",
-    description: "Kickstart your entrepreneurial journey with expert guidance and a structured launch plan.",
+    title: "Deal Management",
+    description: "Manage your onboarding, documents, and deal flow with our structured platform.",
     image: "/intro-3.svg",
     color: "bg-yellow-600",
   },

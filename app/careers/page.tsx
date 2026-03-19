@@ -33,8 +33,8 @@ const positions = [
 ];
 
 const benefits = [
-  { title: "Impactful Work", description: "Build products that change how people invest and build wealth.", icon: Rocket },
-  { title: "Flexibility", description: "We value output over hours. Work from where you're most productive.", icon: Smile },
+  { title: "Impactful Work", description: "Build products that change how franchise discovery and deal management happens.", icon: Rocket },
+  { title: "Flexibility", description: "We value output over hours. Work from where you&apos;re most productive.", icon: Smile },
   { title: "Health & Wellness", description: "Comprehensive health coverage for you and your family.", icon: Heart },
   { title: "Learning Fund", description: "Annual budget for books, courses, and conferences.", icon: Briefcase },
 ];
@@ -59,7 +59,7 @@ export default function CareersPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl sm:text-7xl font-black mb-8 tracking-tight"
           >
-            BUILD THE FUTURE OF <br className="hidden sm:block" /> FRANCHISE INVESTMENT
+            BUILD THE FUTURE OF <br className="hidden sm:block" /> FRANCHISE MARKETPLACE
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function CareersPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-800 max-w-2xl mx-auto leading-relaxed"
           >
-            We're looking for ambitious minds to help us build the Middle East's most trusted investment platform.
+            We&apos;re looking for ambitious minds to help us build the Middle East&apos;s most trusted franchise discovery and deal management platform.
           </motion.p>
         </div>
       </section>
@@ -136,8 +136,8 @@ export default function CareersPage() {
 
           <div className="mt-16 p-12 rounded-[40px] bg-stone-900 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 blur-[80px]" />
-            <h3 className="text-2xl font-bold text-white mb-4">Don't see a fit?</h3>
-            <p className="text-stone-400 mb-8 max-w-sm mx-auto">We're always looking for talented people. Send us your CV and we'll keep you in mind.</p>
+            <h3 className="text-2xl font-bold text-white mb-4">Don&apos;t see a fit?</h3>
+            <p className="text-stone-400 mb-8 max-w-sm mx-auto">We&apos;re always looking for talented people. Send us your CV and we&apos;ll keep you in mind.</p>
             <a href="mailto:careers@franchiseen.co" className="text-yellow-500 font-bold hover:underline">careers@franchiseen.co</a>
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Apple, Play, Rocket } from "lucide-react";
+import { } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
@@ -74,8 +74,8 @@ export default function Hero() {
               variants={itemVariants}
               className="text-lg sm:text-xl text-stone-600 dark:text-stone-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Franchiseen is the Middle East's premier platform for fractional franchise investment.
-              Start building your portfolio with verified high-yield brands starting from AED 5,000.
+              Franchiseen is the Middle East&apos;s premier marketplace for franchise discovery and deal management.
+              Connect with verified brands and manage your expansion journey in one secure platform.
             </motion.p>
           </motion.div>
 

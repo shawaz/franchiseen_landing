@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Rocket, Linkedin, Twitter, Instagram, Mail, MapPin } from "lucide-react";
+import { Linkedin, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
 
 const footerLinks = {
@@ -40,7 +40,7 @@ export default function Footer() {
             <span className="font-black text-white text-2xl tracking-tight">FRANCHISEEN</span>
           </Link>
           <p className="text-stone-500 leading-relaxed max-w-lg mx-auto mb-8">
-            Empowering the next generation of investors to build wealth through verified, high-growth franchise opportunities across the Middle East.
+            The premier marketplace for franchise discovery and deal management across the Middle East.
           </p>
           
           {/* Quick Links Horizontal */}
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-8">
-            <span>Regulated by DFSA</span>
+            <span>Regulated Platform</span>
           </div>
         </div>
       </div>
