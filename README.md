@@ -50,3 +50,4 @@ No environment variables required.
 - [ ] Update `hello@franchiseen.com` with the real contact email
 - [ ] Add a real logo to `/public/logo.svg` and update Navbar/Footer
 - [ ] Update stats bar numbers as needed
+# franchiseen_landing
