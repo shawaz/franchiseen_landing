@@ -1,74 +1,88 @@
 import Link from "next/link";
+import { Rocket, Linkedin, Twitter, Instagram, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
+
+const footerLinks = {
+  legal: [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+  ],
+  company: [
+    { name: "Contact Us", href: "/contact" },
+    { name: "About Us", href: "/about" },
+    { name: "Careers", href: "/careers" },
+  ]
+  // resources: [
+  //   { name: "Features", href: "#features" },
+  //   { name: "How It Works", href: "#how-it-works" },
+  //   { name: "Success Stories", href: "/stories" },
+  // ]
+};
+
+const socialLinks = [
+  { icon: Twitter, href: "#", name: "Twitter" },
+  { icon: Linkedin, href: "#", name: "LinkedIn" },
+  { icon: Instagram, href: "#", name: "Instagram" },
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">F</span>
-              </div>
-              <span className="font-bold text-white text-lg">Franchiseen</span>
-            </div>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-              Connecting investors with verified franchise opportunities across the UAE and beyond.
-            </p>
-            <p className="text-xs text-gray-600 mt-4">
-              Operated by House of Guzarishh FZE LLC<br />
-              Ajman Free Zone, UAE
-            </p>
-          </div>
+    <footer className="bg-stone-950 text-stone-400 py-20 relative overflow-hidden">
+      {/* Decorative Gradient Background */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-yellow-600/5 blur-[120px] pointer-events-none" />
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-white font-semibold text-sm mb-4">Legal</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/privacy" className="text-sm hover:text-white transition-colors">
-                  Privacy Policy
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center">
+        {/* Brand & Mission */}
+        <div className="mb-12">
+          <Link href="/" className="flex items-center justify-center gap-2 mb-6 group">
+            <Image src="/logo.svg" alt="Logo" width={32} height={32} />
+            <span className="font-black text-white text-2xl tracking-tight">FRANCHISEEN</span>
+          </Link>
+          <p className="text-stone-500 leading-relaxed max-w-lg mx-auto mb-8">
+            Empowering the next generation of investors to build wealth through verified, high-growth franchise opportunities across the Middle East.
+          </p>
+          
+          {/* Quick Links Horizontal */}
+          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
+            {footerLinks.company.map((link) => (
+              <li key={link.name}>
+                <Link href={link.href} className="text-sm font-semibold uppercase tracking-wider hover:text-yellow-500 transition-colors">
+                  {link.name}
                 </Link>
               </li>
-              <li>
-                <Link href="/terms" className="text-sm hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
 
-          {/* Company */}
-          <div>
-            <h4 className="text-white font-semibold text-sm mb-4">Company</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/contact" className="text-sm hover:text-white transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <a href="#features" className="text-sm hover:text-white transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#how-it-works" className="text-sm hover:text-white transition-colors">
-                  How It Works
-                </a>
-              </li>
-            </ul>
+          <div className="flex justify-center gap-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-yellow-600 hover:border-yellow-600 hover:text-white transition-all group"
+                aria-label={social.name}
+              >
+                <social.icon className="w-5 h-5" />
+              </a>
+            ))}
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} House of Guzarishh FZE LLC. All rights reserved.
-          </p>
-          <p className="text-xs text-gray-600">
-            Ajman Free Zone, United Arab Emirates
-          </p>
+        {/* Bottom Bar */}
+        <div className="w-full pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] font-bold uppercase tracking-widest text-stone-600">
+          <p>© {new Date().getFullYear()} House of Guzarishh FZE LLC</p>
+          
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+            {footerLinks.legal.map((link) => (
+              <Link key={link.name} href={link.href} className="hover:text-stone-400 transition-colors">
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex gap-8">
+            <span>Regulated by DFSA</span>
+          </div>
         </div>
       </div>
     </footer>

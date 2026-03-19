@@ -1,67 +1,100 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
 const steps = [
   {
     step: "01",
-    title: "Browse Brands",
-    description:
-      "Explore a curated list of verified franchise brands across food, retail, fitness, and more. Filter by investment size, region, and industry.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>
-    ),
+    title: "Explore Franchise",
+    description: "Discover premium franchise brands vetted for high profitability and sustainable growth.",
+    image: "/intro-1.svg",
+    color: "bg-yellow-500",
   },
   {
     step: "02",
-    title: "Connect & Invest",
-    description:
-      "Review detailed brand profiles, connect directly with franchisors, and initiate your investment — all through the Franchiseen app.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    title: "Select Location",
+    description: "Choose from prime real estate locations optimized for maximum foot traffic and market reach.",
+    image: "/intro-2.svg",
+    color: "bg-stone-500",
   },
   {
     step: "03",
-    title: "Grow & Earn",
-    description:
-      "Track your franchise investments, monitor performance, and grow your portfolio. Real-time updates keep you in control.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
+    title: "Start New Project",
+    description: "Kickstart your entrepreneurial journey with expert guidance and a structured launch plan.",
+    image: "/intro-3.svg",
+    color: "bg-yellow-600",
+  },
+  {
+    step: "04",
+    title: "Launch Your Franchise",
+    description: "Open your doors to success and start generating revenue with a proven business model.",
+    image: "/intro-4.svg",
+    color: "bg-stone-800",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-3">
-            Simple Process
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+    <section id="how-it-works" className="py-24 bg-white dark:bg-stone-900 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            The Journey
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl sm:text-5xl font-black text-foreground tracking-tight"
+          >
             How Franchiseen Works
-          </h2>
+          </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          {/* Connector line */}
-          <div className="hidden md:block absolute top-10 left-1/4 right-1/4 h-px bg-gradient-to-r from-blue-200 to-blue-200" />
-
-          {steps.map((s) => (
-            <div key={s.step} className="relative flex flex-col items-center text-center p-6">
-              <div className="relative z-10 w-20 h-20 rounded-2xl bg-blue-50 border-2 border-blue-100 flex items-center justify-center mb-6 text-blue-600">
-                {s.icon}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          {steps.map((s, i) => (
+            <motion.div
+              key={s.step}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="relative flex flex-col items-center text-center group"
+            >
+              <div className="relative z-10 w-full aspect-square mb-8 p-4 flex items-center justify-center">
+                {/* Background Glow */}
+                <div className={`absolute inset-0 ${s.color} opacity-5 rounded-full blur-3xl group-hover:opacity-10 transition-opacity duration-500`} />
+                
+                {/* Image Container */}
+                <div className="relative w-full h-full transform group-hover:scale-105 transition-transform duration-500 ease-out">
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                
+                {/* Step Number Badge */}
+                <div className="absolute top-2 right-2 w-10 h-10 bg-yellow-500 text-stone-950 rounded-2xl flex items-center justify-center text-sm font-bold shadow-lg transform -rotate-6 group-hover:rotate-0 transition-transform duration-500">
+                  {s.step}
+                </div>
               </div>
-              <span className="text-xs font-bold text-blue-400 tracking-widest mb-2">
-                STEP {s.step}
-              </span>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">{s.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{s.description}</p>
-            </div>
+
+              <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
+                {s.title}
+              </h3>
+              <p className="text-foreground/60 leading-relaxed text-sm px-4">
+                {s.description}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>

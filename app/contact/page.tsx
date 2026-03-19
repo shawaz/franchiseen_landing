@@ -1,125 +1,137 @@
+"use client";
+
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "Contact — Franchiseen",
-  description: "Get in touch with Franchiseen — operated by House of Guzarishh FZE LLC, Ajman Free Zone, UAE.",
-};
+import { motion } from "framer-motion";
+import { Mail, MapPin, Send, ChevronRight } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-24 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Have a question about Franchiseen? We&apos;d love to hear from you.
-              Reach out and our team will get back to you within 1–2 business days.
-            </p>
+      <main className="pt-32 pb-20 overflow-hidden">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <span className="px-4 py-1.5 bg-brand-50 dark:bg-brand-900/20 text-brand-700 dark:text-brand-400 text-xs font-bold tracking-widest uppercase rounded-full border border-brand-100 dark:border-brand-800/50 inline-block mb-4">
+                Get In Touch
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+                Let&apos;s Build the <span className="text-brand-600">Future</span> Together
+              </h1>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Have a question about Franchiseen? We&apos;d love to hear from you.
+                Reach out and our team will get back to you within 1–2 business days.
+              </p>
+            </motion.div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Company info */}
-            <div className="space-y-6">
-              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                <h2 className="font-bold text-gray-900 mb-4">Company Information</h2>
-                <dl className="space-y-3 text-sm">
-                  <div>
-                    <dt className="text-gray-500 text-xs uppercase tracking-wide mb-1">Company Name</dt>
-                    <dd className="text-gray-900 font-medium">House of Guzarishh FZE LLC</dd>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column: Info Cards */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <div className="glass shadow-premium rounded-3xl p-8 border border-white/20 dark:border-stone-800">
+                <h2 className="text-2xl font-bold text-foreground mb-6">Company Information</h2>
+                <div className="space-y-6">
+                  <div className="group transition-all">
+                    <p className="text-brand-600 text-xs font-bold uppercase tracking-wider mb-2">Company Name</p>
+                    <p className="text-foreground font-semibold text-lg">House of Guzarishh FZE LLC</p>
                   </div>
-                  <div>
-                    <dt className="text-gray-500 text-xs uppercase tracking-wide mb-1">Registered In</dt>
-                    <dd className="text-gray-900 font-medium">Ajman Free Zone, United Arab Emirates</dd>
+                  <div className="group transition-all">
+                    <p className="text-brand-600 text-xs font-bold uppercase tracking-wider mb-2">Registered In</p>
+                    <p className="text-foreground font-semibold text-lg">Ajman Free Zone, United Arab Emirates</p>
                   </div>
-                  <div>
-                    <dt className="text-gray-500 text-xs uppercase tracking-wide mb-1">Platform</dt>
-                    <dd className="text-gray-900 font-medium">Franchiseen</dd>
+                  <div className="group transition-all">
+                    <p className="text-brand-600 text-xs font-bold uppercase tracking-wider mb-2">Platform</p>
+                    <p className="text-foreground font-semibold text-lg">Franchiseen</p>
                   </div>
-                </dl>
+                </div>
               </div>
 
-              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <h2 className="font-bold text-gray-900 mb-4">Get in Touch</h2>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
+              <div className="bg-brand-600 rounded-3xl p-8 text-white shadow-glow relative overflow-hidden group">
+                <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-500" />
+                <h2 className="text-2xl font-bold mb-8 relative z-10">Direct Channels</h2>
+                <div className="space-y-6 relative z-10">
+                  <a 
+                    href="mailto:hello@franchiseen.com" 
+                    className="flex items-center gap-4 group/item"
+                  >
+                    <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                      <Mail className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="text-xs text-gray-500 mb-1">Email</p>
-                      <a
-                        href="mailto:hello@franchiseen.com"
-                        className="text-blue-600 font-medium text-sm hover:underline"
-                      >
-                        hello@franchiseen.com
-                      </a>
+                      <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-1">Email Support</p>
+                      <p className="text-lg font-semibold">hello@franchiseen.com</p>
                     </div>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center">
+                      <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="text-xs text-gray-500 mb-1">Address</p>
-                      <p className="text-gray-900 text-sm font-medium">
-                        Ajman Free Zone<br />
-                        United Arab Emirates
-                      </p>
+                      <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-1">Our Location</p>
+                      <p className="text-lg font-semibold">Ajman Free Zone, UAE</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Contact form */}
-            <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-              <h2 className="font-bold text-gray-900 mb-6">Send a Message</h2>
+            {/* Right Column: Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="glass shadow-premium rounded-3xl p-8 sm:p-10 border border-white/20 dark:border-stone-800"
+            >
+              <h2 className="text-2xl font-bold text-foreground mb-8">Send a Message</h2>
               <form
                 action="mailto:hello@franchiseen.com"
                 method="get"
                 encType="text/plain"
-                className="space-y-4"
+                className="space-y-6"
               >
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Jane Smith"
-                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-bold text-foreground/70 mb-2 px-1">
+                      Your Name
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      placeholder="Jane Smith"
+                      className="w-full px-5 py-4 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all placeholder:text-stone-400"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-bold text-foreground/70 mb-2 px-1">
+                      Email Address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="jane@example.com"
+                      className="w-full px-5 py-4 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all placeholder:text-stone-400"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="jane@example.com"
-                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="subject" className="block text-sm font-bold text-foreground/70 mb-2 px-1">
                     Subject
                   </label>
                   <input
@@ -128,12 +140,12 @@ export default function ContactPage() {
                     type="text"
                     required
                     placeholder="How can we help?"
-                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-5 py-4 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all placeholder:text-stone-400"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="body" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="body" className="block text-sm font-bold text-foreground/70 mb-2 px-1">
                     Message
                   </label>
                   <textarea
@@ -141,23 +153,24 @@ export default function ContactPage() {
                     name="body"
                     rows={5}
                     required
-                    placeholder="Tell us more..."
-                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    placeholder="Tell us what's on your mind..."
+                    className="w-full px-5 py-4 rounded-2xl bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all placeholder:text-stone-400 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-blue-600 text-white font-medium text-sm rounded-lg hover:bg-blue-700 transition-colors"
+                  className="w-full py-5 bg-brand-600 text-white font-bold rounded-2xl hover:bg-brand-700 hover:shadow-glow transition-all flex items-center justify-center gap-3 group"
                 >
                   Send Message
+                  <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
 
-                <p className="text-xs text-gray-400 text-center">
+                <p className="text-sm text-muted-foreground text-center">
                   This will open your default email client.
                 </p>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </main>
