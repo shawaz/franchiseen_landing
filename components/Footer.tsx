@@ -42,7 +42,7 @@ export default function Footer() {
           <p className="text-stone-500 leading-relaxed max-w-lg mx-auto mb-8">
             The premier marketplace for franchise discovery and deal management across the Middle East.
           </p>
-          
+
           {/* Quick Links Horizontal */}
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
             {footerLinks.company.map((link) => (
@@ -71,7 +71,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="w-full pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] font-bold uppercase tracking-widest text-stone-600">
           <p>© {new Date().getFullYear()} House of Guzarishh FZE LLC</p>
-          
+
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
             {footerLinks.legal.map((link) => (
               <Link key={link.name} href={link.href} className="hover:text-stone-400 transition-colors">
@@ -80,9 +80,9 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="flex gap-8">
+          {/* <div className="flex gap-8">
             <span>Regulated Platform</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
