@@ -4,8 +4,10 @@ import Image from "next/image";
 
 const footerLinks = {
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Refund Policy", href: "/refund" },
+    // { name: "Shipping Policy", href: "/shipping" },
     { name: "Cookie Policy", href: "/cookies" },
   ],
   company: [
@@ -13,11 +15,6 @@ const footerLinks = {
     { name: "About Us", href: "/about" },
     { name: "Careers", href: "/careers" },
   ]
-  // resources: [
-  //   { name: "Features", href: "#features" },
-  //   { name: "How It Works", href: "#how-it-works" },
-  //   { name: "Success Stories", href: "/stories" },
-  // ]
 };
 
 const socialLinks = [
@@ -44,7 +41,7 @@ export default function Footer() {
           </p>
 
           {/* Quick Links Horizontal */}
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
+          {/* <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
             {footerLinks.company.map((link) => (
               <li key={link.name}>
                 <Link href={link.href} className="text-sm font-semibold uppercase tracking-wider hover:text-yellow-500 transition-colors">
@@ -52,9 +49,9 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
 
-          <div className="flex justify-center gap-4">
+          {/* <div className="flex justify-center gap-4">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
@@ -65,24 +62,29 @@ export default function Footer() {
                 <social.icon className="w-5 h-5" />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
-        <div className="w-full pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] font-bold uppercase tracking-widest text-stone-600">
-          <p>© {new Date().getFullYear()} House of Guzarishh FZE LLC</p>
+        <div className="w-full pt-8 border-t border-white/5 flex flex-col items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 text-[10px] font-bold uppercase tracking-widest text-stone-600">
+            <p>© {new Date().getFullYear()} House of Guzarishh FZE LLC</p>
 
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-            {footerLinks.legal.map((link) => (
-              <Link key={link.name} href={link.href} className="hover:text-stone-400 transition-colors">
-                {link.name}
-              </Link>
-            ))}
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+              {footerLinks.legal.map((link) => (
+                <Link key={link.name} href={link.href} className="hover:text-stone-400 transition-colors">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* <div className="flex gap-8">
-            <span>Regulated Platform</span>
-          </div> */}
+          {/* Mandatory Legal Notice */}
+          <div className="max-w-3xl border border-white/5 bg-white/5 p-4 rounded-xl text-[9px] leading-relaxed uppercase tracking-wider text-stone-500">
+            <p>
+              <span className="text-stone-400 font-bold">Legal Notice:</span> House Of Guzarishh FZE LLC is an Ajman NuVentures Centre Free Zone establishment, established according to the Amiri Decree No.15 of 2023. Registered Capital: AED 100,000. Address: BC-889215, Amber Gem Tower, Ajman, UAE. Manager: Shabnaz Sharif Hameed Shareef.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

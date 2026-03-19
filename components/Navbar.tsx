@@ -64,7 +64,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
             <Link
               href="/#download"
@@ -73,7 +73,7 @@ export default function Navbar() {
               Download App
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

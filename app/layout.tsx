@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description:
       "Discover and invest in verified franchise opportunities across the UAE and beyond.",
   },
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";

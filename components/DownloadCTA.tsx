@@ -50,14 +50,13 @@ export default function DownloadCTA() {
               Join thousands of users already using Franchiseen to discover and manage verified franchise deals.
             </motion.p>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              {/* App Store */}
               <a
                 href="https://apps.apple.com"
                 target="_blank"
@@ -71,7 +70,6 @@ export default function DownloadCTA() {
                 </div>
               </a>
 
-              {/* Google Play */}
               <a
                 href="https://play.google.com"
                 target="_blank"
@@ -84,9 +82,9 @@ export default function DownloadCTA() {
                   <div className="text-lg font-black leading-tight">Google Play</div>
                 </div>
               </a>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -101,7 +99,7 @@ export default function DownloadCTA() {
                 <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
                 Available worldwide
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Right Mockups (Angled Phones) */}
