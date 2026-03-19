@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Apple, Play } from "lucide-react";
 
 export default function DownloadCTA() {
   return (

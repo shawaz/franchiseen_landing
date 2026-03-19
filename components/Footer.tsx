@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { Linkedin, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = {
   legal: [
@@ -17,12 +16,6 @@ const footerLinks = {
   ]
 };
 
-const socialLinks = [
-  { icon: Twitter, href: "#", name: "Twitter" },
-  { icon: Linkedin, href: "#", name: "LinkedIn" },
-  { icon: Instagram, href: "#", name: "Instagram" },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-stone-950 text-stone-400 py-20 relative overflow-hidden">
@@ -32,10 +25,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center text-center">
         {/* Brand & Mission */}
         <div className="mb-12">
-          <Link href="/" className="flex items-center justify-center gap-2 mb-6 group">
+          <div className="flex items-center justify-center gap-2 mb-6 group">
             <Image src="/logo.svg" alt="Logo" width={32} height={32} />
             <span className="font-black text-white text-2xl tracking-tight">FRANCHISEEN</span>
-          </Link>
+          </div>
           <p className="text-stone-500 leading-relaxed max-w-lg mx-auto mb-8">
             The premier marketplace for franchise discovery and deal management across the Middle East.
           </p>

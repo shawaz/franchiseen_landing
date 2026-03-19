@@ -131,6 +131,7 @@ function ContactForm() {
         setStatus("error");
       }
     } catch (err) {
+      console.error(err);
       setStatus("error");
     }
   }
